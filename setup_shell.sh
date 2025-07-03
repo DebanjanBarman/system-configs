@@ -4,7 +4,6 @@ sudo chsh -s $(which zsh)
 # setup all the requirements
 
 cd
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
 
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
@@ -26,4 +25,4 @@ sudo cp -r CascadiaCode /usr/share/fonts
 sudo fc-cache -fv
 
 
-
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y

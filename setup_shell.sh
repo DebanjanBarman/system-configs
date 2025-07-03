@@ -3,7 +3,8 @@ sudo chsh -s $(which zsh)
 
 # setup all the requirements
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+cd
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
 
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
@@ -23,7 +24,6 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/CascadiaCo
 unzip CascadiaCode.zip -d ./CascadiaCode
 sudo cp -r CascadiaCode /usr/share/fonts
 sudo fc-cache -fv
-
 
 
 

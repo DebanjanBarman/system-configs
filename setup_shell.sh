@@ -1,15 +1,10 @@
 sudo dnf install zsh -y
 sudo chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
 
 # setup all the requirements
 
 cd
-
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
-
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
 
 # install nerd fonts 
@@ -23,6 +18,12 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/CascadiaCo
 unzip CascadiaCode.zip -d ./CascadiaCode
 sudo cp -r CascadiaCode /usr/share/fonts
 sudo fc-cache -fv
+ sudo dnf install cascadia-fonts-all -y
 
+# install zsh themes
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -y
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
